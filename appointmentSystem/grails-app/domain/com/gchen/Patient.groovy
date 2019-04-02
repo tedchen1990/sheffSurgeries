@@ -8,7 +8,10 @@ String patientResidence
 Date patientDob 
 String patientID 
 Date dateRegistered 
-int patientPhone  
+int patientPhone
+
+Appointment appointment
+static hasMany=[prescription:Prescription,surgery:Surgery]  
 
     static constraints = {
 	patientName blank:false, nullable:false;

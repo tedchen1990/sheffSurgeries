@@ -2,5 +2,5 @@ package com.gchen
 
 class AppointmentController {
 
-    def index() { }
+    def scaffold = Appointment
 }

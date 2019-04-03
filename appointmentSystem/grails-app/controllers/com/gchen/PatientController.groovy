@@ -2,5 +2,5 @@ package com.gchen
 
 class PatientController {
 
-    def index() { }
+    def scaffold = Patient
 }

@@ -18,6 +18,5 @@ static belongsTo=[Surgery]
 	recepUsername blank:false, nullable:false;
 	recepPassword blank:false, nullable:false;
 	recepPhone blank:false, nullable:false;
-	surgery blank:false, nullable:false;
     }
 }

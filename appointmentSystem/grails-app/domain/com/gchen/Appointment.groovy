@@ -16,8 +16,5 @@ static hasMany=[surgery:Surgery]
 	appTime blank:false, nullable:false;
 	appDuration blank:false, nullable:false;
 	roomNumber blank:false, nullable:false;
-	patient blank:false, nullable:false;
-	prescriptions blank:false, nullable:false;
-	surgeries blank:false, nullable:false;
     }
 }

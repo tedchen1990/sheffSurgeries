@@ -19,7 +19,5 @@ Doctor doctor
 	totalCost blank:false, nullable:false;
 	dateIssued blank:false, nullable:false;
 	patientPaying blank:false, nullable:false;
-	patient blank:false, nullable:false;
-	doctor blank:false, nullable:false;
     }
 }

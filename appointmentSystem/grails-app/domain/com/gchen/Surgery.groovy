@@ -10,8 +10,9 @@ int numberOfPatients
 String description
 Date openingTime
 
-Appointment appointment
-static hasMany =[doctor:Doctor,nurse:Nurse,patient:Patient,receptionist:Receptionist]
+Patient patient
+
+static hasMany =[doctor:Doctor,nurse:Nurse]
 
     static constraints = {
 	name blank:false, nullable:false;

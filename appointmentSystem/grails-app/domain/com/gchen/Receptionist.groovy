@@ -2,13 +2,13 @@ package com.gchen
 
 class Receptionist {
 
-String recepName 
-String recepEmail 
+String recepName
+String recepEmail   
 String recepUsername 
-String recepPassword 
-int recepPhone
+String recepPassword
+String recepPhone
    
-static hasMany =[surgery:Surgery]
+static hasMany =[appointment:Appointment,surgery:Surgery]
 
 static belongsTo=[Surgery]
 

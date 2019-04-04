@@ -3,14 +3,13 @@ package com.gchen
 class Appointment {
 
 Date appDate 
-Date appTime 
+String appTime 
 int appDuration 
 String roomNumber
-
-Doctor doctor 
+Doctor doctor
 Patient patient
-static hasMany=[surgery:Surgery] 
- 
+static hasMany =[nurse:Nurse,surgery:Surgery]
+
     static constraints = {
 	appDate blank:false, nullable:false;
 	appTime blank:false, nullable:false;

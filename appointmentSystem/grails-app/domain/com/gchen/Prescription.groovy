@@ -10,7 +10,6 @@ Date dateIssued
 Boolean patientPaying
 
 Patient patient 
-Doctor doctor
 
     static constraints = {
 	pharmacyName blank:false, nullable:false;

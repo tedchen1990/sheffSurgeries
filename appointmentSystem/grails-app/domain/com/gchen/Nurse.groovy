@@ -7,8 +7,7 @@ String qualifications
 String nurseEmail 
 String nurseOffice 
 int nursePhone
-
-static hasMany =[doctor:Doctor,surgery:Surgery]
+Surgery surgery
 
 static belongsTo=[Surgery]
 

@@ -6,9 +6,13 @@ Date appDate
 String appTime 
 int appDuration 
 String roomNumber
-Doctor doctor
-Patient patient
-static hasMany =[nurse:Nurse,surgery:Surgery]
+
+static hasMany=[surgerys:Surgery,doctors:Doctor,patients:Patient,nurses:Nurse,receptionists:Receptionist]
+static belongsTo=[Patient,Nurse,Doctor,Receptionist]
+
+String toString(){
+return appDate
+}
 
     static constraints = {
 	appDate blank:false, nullable:false;

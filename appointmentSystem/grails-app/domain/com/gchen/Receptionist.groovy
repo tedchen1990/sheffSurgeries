@@ -7,10 +7,13 @@ String recepEmail
 String recepUsername 
 String recepPassword
 String recepPhone
-   
-static hasMany =[appointment:Appointment,surgery:Surgery]
 
+static hasMany=[appointments:Appointment,surgerys:Surgery]
 static belongsTo=[Surgery]
+
+String toString(){
+return recepName
+}
 
     static constraints = {
 	recepName blank:false, nullable:false;

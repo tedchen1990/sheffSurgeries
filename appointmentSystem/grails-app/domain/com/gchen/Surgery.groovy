@@ -5,14 +5,16 @@ class Surgery {
 String name
 String address
 String postcode
-int telephone
+String telephone
 int numberOfPatients
 String description
-Date openingTime
+String openingTime
 
-Patient patient
-
-static hasMany =[doctor:Doctor,nurse:Nurse]
+static hasMany=[appointments:Appointment,doctors:Doctor,nurses:Nurse,receptionists:Receptionist,patients:Patient]
+static belongsTo=[Appointment]
+String toString(){
+return name
+}
 
     static constraints = {
 	name blank:false, nullable:false;

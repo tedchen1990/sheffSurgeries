@@ -3,13 +3,19 @@ package com.gchen
 class Prescription {
   
 String pharmacyName 
-int prescripNumber 
+String prescripNumber 
 String medicine 
 double totalCost 
 Date dateIssued 
 Boolean patientPaying
 
-Patient patient 
+Doctor doctor
+static hasMany=[patients:Patient]
+static belongsTo=[Doctor,Patient]
+
+String toString(){
+return pharmacyName
+}
 
     static constraints = {
 	pharmacyName blank:false, nullable:false;

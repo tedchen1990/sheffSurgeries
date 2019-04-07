@@ -9,7 +9,7 @@ String recepPassword
 String recepPhone
 
 static hasMany=[appointments:Appointment,surgerys:Surgery]
-static belongsTo=[Surgery]
+static belongsTo=[Appointment,Surgery]
 
 String toString(){
 return recepName
@@ -18,7 +18,7 @@ return recepName
     static constraints = {
 	recepName blank:false, nullable:false;
 	recepEmail blank:false, nullable:false, email:true;
-	recepUsername blank:false, nullable:false;
+	recepUsername blank:false, nullable:false,unique:true;
 	recepPassword blank:false, nullable:false;
 	recepPhone blank:false, nullable:false;
     }

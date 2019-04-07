@@ -19,7 +19,7 @@ return pharmacyName
 
     static constraints = {
 	pharmacyName blank:false, nullable:false;
-	prescripNumber blank:false, nullable:false;
+	prescripNumber blank:false, nullable:false,unique:true;
 	medicine blank:false, nullable:false;
 	totalCost blank:false, nullable:false;
 	dateIssued blank:false, nullable:false;

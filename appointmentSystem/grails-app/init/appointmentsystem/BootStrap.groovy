@@ -11,7 +11,7 @@ class BootStrap {
 	 recepEmail:'receptionCentre101@gmail.com',
 	 recepUsername: 'b7020285',
 	 recepPassword:'123456',
-	 recepPhone:'0777777777777'
+	 recepPhone:'07777777777'
 	).save()
 
 	def receptionist_B = new Receptionist
@@ -20,7 +20,7 @@ class BootStrap {
 	 recepEmail:'receptionCentre102@gmail.com',
 	 recepUsername: 'b7123456',
 	 recepPassword:'123456',
-	 recepPhone:'010777777777'
+	 recepPhone:'07777777777'
 	).save()
 
 	def receptionist_C = new Receptionist
@@ -29,24 +29,26 @@ class BootStrap {
 	 recepEmail:'receptionCentre103@gmail.com',
 	 recepUsername: 'b7000000',
 	 recepPassword:'123456',
-	 recepPhone:'010777777777'
+	 recepPhone:'07777777777'
 	).save()
 
 	/* Doctor */
 	def doctor_A = new Doctor
 	(
+	 username:'M11',
 	 fullName:'Metthew',
 	 qualification:'PHD',
 	 position:'Cardiology',
 	 doctorEmail:'metthew@gmail.com', 
 	 password:'000000',
 	 doctorOffice:'Hallam university',
-	 doctorPhone:'07111111111', 
+	 doctorPhone:'07111111111',
 	 bio:'Very good!'
 	).save()
 	
 	def doctor_B = new Doctor
 	(
+	 username:'J11',
 	 fullName:'Jacky',
 	 qualification:'PHD',
 	 position:'Dermatology',
@@ -59,6 +61,7 @@ class BootStrap {
 
 	def doctor_C = new Doctor
 	(
+	 username:'J12',
 	 fullName:'Jame',
 	 qualification:'Professor',
 	 position:'Ophthalmology',
@@ -76,7 +79,7 @@ class BootStrap {
 	 qualifications:'A-level', 
 	 nurseEmail:'aston@gmial.com',
 	 nurseOffice :'hallam university', 
-	 nursePhone:'0733333333'
+	 nursePhone:'07433333333'
 	).save()
 
 	def nurse_B = new Nurse
@@ -85,7 +88,7 @@ class BootStrap {
 	 qualifications:'A-level', 
 	 nurseEmail:'miki@gmial.com',
 	 nurseOffice :'hallam university', 
-	 nursePhone:'0733333336'
+	 nursePhone:'07433333331'
 	).save()
 
 	def nurse_C = new Nurse
@@ -94,7 +97,7 @@ class BootStrap {
 	 qualifications:'A-level', 
 	 nurseEmail:'seoiy@gmial.com',
 	 nurseOffice :'hallam university', 
-	 nursePhone:'0733333335'
+	 nursePhone:'07433333332'
 	).save()
 
 	/* Appointment */
@@ -126,7 +129,7 @@ class BootStrap {
 	def patient_A = new Patient
 	(
 	 patientName:'Grace',
-	 patientAddress:'grace@gmail.com',
+	 patientAddress:'Central quay',
 	 patientResidence:'Sheffield',
 	 patientDob:new Date('01/09/1980'),
 	 patientID:'P-1',
@@ -138,7 +141,7 @@ class BootStrap {
 	def patient_B = new Patient
 	(
 	 patientName:'Miles',
-	 patientAddress:'miles@gmail.com',
+	 patientAddress:'Central quay',
 	 patientResidence:'Sheffield',
 	 patientDob:new Date('01/09/1998'),
 	 patientID:'P-2',
@@ -150,7 +153,7 @@ class BootStrap {
 	def patient_C = new Patient
 	(
 	 patientName:'lisy',
-	 patientAddress:'lisy@gmail.com',
+	 patientAddress:'Central quay',
 	 patientResidence:'Sheffield',
 	 patientDob:new Date('01/05/1994'),
 	 patientID:'P-3',
@@ -247,17 +250,13 @@ class BootStrap {
 	appointment_B.addToSurgerys(surgery_B)
 	appointment_C.addToSurgerys(surgery_C)
 
-	appointment_A.addToDoctors(doctor_A)
-	appointment_B.addToDoctors(doctor_B)
-	appointment_C.addToDoctors(doctor_C)
-
-	appointment_A.addToPatients(patient_A)
-	appointment_B.addToPatients(patient_B)
-	appointment_C.addToPatients(patient_C)
-
 	appointment_A.addToNurses(nurse_A)
 	appointment_B.addToNurses(nurse_B)
 	appointment_C.addToNurses(nurse_C)
+
+	appointment_A.addToDoctors(doctor_A)
+	appointment_B.addToDoctors(doctor_B)
+	appointment_C.addToDoctors(doctor_C)
 
 	appointment_A.addToReceptionists(receptionist_A)
 	appointment_B.addToReceptionists(receptionist_B)
@@ -267,9 +266,21 @@ class BootStrap {
 	doctor_B.addToPrescriptions(prescription_B)
 	doctor_C.addToPrescriptions(prescription_C)
 
-	prescription_A.addToPatients(patient_A)
-	prescription_B.addToPatients(patient_B)
-	prescription_C.addToPatients(patient_C)
+	doctor_A.addToPatients(patient_A)
+	doctor_B.addToPatients(patient_B)
+	doctor_C.addToPatients(patient_C)
+
+	doctor_A.addToNurses(nurse_A)
+	doctor_B.addToNurses(nurse_B)
+	doctor_C.addToNurses(nurse_C)
+
+	nurse_A.addToPatients(patient_A)
+	nurse_B.addToPatients(patient_B)
+	nurse_C.addToPatients(patient_C)
+
+	patient_A.addToPrescriptions(prescription_A)
+	patient_B.addToPrescriptions(prescription_B)
+	patient_C.addToPrescriptions(prescription_C)
 
 	}
     def destroy = {

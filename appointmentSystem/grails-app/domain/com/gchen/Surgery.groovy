@@ -17,12 +17,12 @@ return name
 }
 
     static constraints = {
-	name blank:false, nullable:false;
+	name blank:false, nullable:false,unique:true;
 	address blank:false, nullable:false;
 	postcode blank:false, nullable:false;
 	telephone blank:false, nullable:false;
-	numberOfPatients blank:false, nullable:false;
-	description blank:true, nullable:true;
+	numberOfPatients blank:false, nullable:false,min:1,max:50;
+	description blank:true,nullable:true,widget:'textarea';
 	openingTime blank:false, nullable:false;
     }
 }

@@ -9,9 +9,11 @@ Date patientDob
 String patientID 
 Date dateRegistered 
 String patientPhone
+
 Appointment appointment
-static hasMany=[prescriptions:Prescription,surgerys:Surgery]
-static belongsTo=[Surgery]
+static hasMany=[prescriptions:Prescription,surgerys:Surgery,nurse:Nurse]
+static belongsTo=[Surgery,Doctor,Nurse]
+
 String toString(){
 return patientName
 }
@@ -21,8 +23,8 @@ return patientName
 	patientAddress blank:false, nullable:false;
 	patientResidence blank:false, nullable:false;
 	patientDob blank:false, nullable:false;
-	patientID blank:false, nullable:false;
+	patientID blank:false, nullable:false,unique:true;
 	dateRegistered blank:false, nullable:false;
-	patientPhone blank:false, nullable:false;
+	patientPhone blank:false, nullable:false,maxSize:11;
     }
 }

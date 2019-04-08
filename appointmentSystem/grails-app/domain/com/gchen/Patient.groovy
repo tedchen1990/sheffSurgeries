@@ -9,10 +9,8 @@ Date patientDob
 String patientID 
 Date dateRegistered 
 String patientPhone
-
-Appointment appointment
-static hasMany=[prescriptions:Prescription,surgerys:Surgery,nurse:Nurse]
-static belongsTo=[Surgery,Doctor,Nurse]
+static hasMany=[surgery:Surgery ,appointments:Appointment]
+static belongsTo=[Appointment,Surgery]
 
 String toString(){
 return patientName

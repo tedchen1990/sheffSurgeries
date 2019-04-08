@@ -98,16 +98,16 @@ dataSource:
 environments:
     development:
         dataSource:
-            dbCreate: update
+            dbCreate: create-drop
             url: jdbc:mysql://localhost:3306/sheffSurgeries_Dev
     test:
         dataSource:
-            dbCreate: update
-            url: jdbc:mysql://localhost:3306/sheffSurgeries_Test
+            dbCreate: 
+            url: 
     production:
         dataSource:
-            dbCreate: update
-            url: jdbc:mysql://localhost:3306/sheffSurgeries
+            dbCreate: 
+            url: 
             properties:
                 jmxEnabled: true
                 initialSize: 5

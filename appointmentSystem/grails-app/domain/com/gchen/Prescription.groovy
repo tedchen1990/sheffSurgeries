@@ -8,7 +8,6 @@ String medicine
 double totalCost 
 Date dateIssued 
 Boolean patientPaying
-
 Doctor doctor
 static hasMany=[patients:Patient]
 static belongsTo=[Doctor,Patient]

@@ -8,8 +8,8 @@ String recepUsername
 String recepPassword
 String recepPhone
 
-static hasMany=[appointments:Appointment,surgerys:Surgery]
-static belongsTo=[Appointment,Surgery]
+static hasMany=[surgerys:Surgery]
+static belongsTo=[Surgery]
 
 String toString(){
 return recepName

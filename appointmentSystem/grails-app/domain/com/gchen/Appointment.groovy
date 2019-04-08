@@ -7,8 +7,8 @@ String appTime
 int appDuration 
 String roomNumber
 
-static hasMany=[surgerys:Surgery,doctors:Doctor,patients:Patient,nurses:Nurse,receptionists:Receptionist]
-static belongsTo=[Patient]
+static hasMany=[surgerys:Surgery,doctors:Doctor,nurses:Nurse,patients:Patient]
+
 
 String toString(){
 return appDate

@@ -102,12 +102,12 @@ environments:
             url: jdbc:mysql://localhost:3306/sheffSurgeries_Dev
     test:
         dataSource:
-            dbCreate: 
-            url: 
+            dbCreate: none
+            url: jdbc:mysql://localhost:3306/sheffSurgeries_Test
     production:
         dataSource:
-            dbCreate: 
-            url: 
+            dbCreate: none
+            url: jdbc:mysql://localhost:3306/sheffSurgeries
             properties:
                 jmxEnabled: true
                 initialSize: 5

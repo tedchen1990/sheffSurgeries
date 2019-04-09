@@ -10,7 +10,7 @@ Date dateIssued
 Boolean patientPaying
 Doctor doctor
 static hasMany=[patients:Patient]
-static belongsTo=[Doctor,Patient]
+static belongsTo=[Doctor]
 
 String toString(){
 return pharmacyName

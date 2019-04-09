@@ -255,13 +255,9 @@ class BootStrap {
 	appointment_B.addToDoctors(doctor_B)
 	appointment_C.addToDoctors(doctor_C)
 
-	appointment_A.addToNurses(nurse_A)
-	appointment_B.addToNurses(nurse_C)
-	appointment_C.addToNurses(nurse_C)
-
-	patient_A.addToAppointments(appointment_A)
-	patient_B.addToAppointments(appointment_B)
-	patient_C.addToAppointments(appointment_C)
+	appointment_A.addToPatients(patient_A)
+	appointment_B.addToPatients(patient_B)
+	appointment_C.addToPatients(patient_C)
 
 	doctor_A.addToPrescriptions(prescription_A)
 	doctor_B.addToPrescriptions(prescription_B)
@@ -270,7 +266,7 @@ class BootStrap {
 	prescription_A.addToPatients(patient_A)
 	prescription_B.addToPatients(patient_B)
 	prescription_C.addToPatients(patient_C)
-	
+
 	}
     def destroy = {
     }

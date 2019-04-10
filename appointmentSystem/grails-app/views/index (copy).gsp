@@ -5,9 +5,7 @@
     <title>Welcome to sheffSurgeries | Home Page</title>
 </head>
 <body>
-<div class="row" >
-      <asset:image src="slide-two.jpg"/>
-</div>
+
 <div id="content" role="main">
     <section class="row colset-2-its">
         <h1>Welcome to sheffSurgeries</h1>

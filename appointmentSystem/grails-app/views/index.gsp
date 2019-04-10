@@ -3,26 +3,21 @@
 <head>
     <meta name="layout" content="main"/>
     <title>Welcome to sheffSurgeries | Home Page</title>
+	<asset:stylesheet src="surgeryView.css"/>
 </head>
 <body>
-<div class="row" >
-      <asset:image src="slide-two.jpg"/>
-</div>
-<div id="content" role="main">
-    <section class="row colset-2-its">
-        <h1>Welcome to sheffSurgeries</h1>
 
-        <div id="controllers" role="navigation">
-            <h2>Available Controllers:</h2>
-            <ul>
-                <g:each var="c" in="${grailsApplication.controllerClasses.sort { it.fullName } }">
-                    <li class="controller">
-                        <g:link controller="${c.logicalPropertyName}">${c.fullName}</g:link>
-                    </li>
-                </g:each>
-            </ul>
-        </div>
-    </section>
+<div class="dropdown">
+  <button class="dropbtn">Login</button>
+  <div class="dropdown-content">
+    <a ><g:link controller="receptionist" action="login">Receptionist</g:link></a>
+    <a ><g:link controller="doctor" action="login">Doctor</g:link></a>
+</div>
+</div>
+<div class="view">
+<h1>Welcome sheffSurgeries</h1>
+<br/>
+<asset:image src="calvary-bruce-private.jpg"/>
 </div>
 
 </body>

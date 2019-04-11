@@ -1,7 +1,6 @@
 package com.gchen
 
 class Patient {
-
 String patientName 
 String patientAddress 
 String patientResidence 

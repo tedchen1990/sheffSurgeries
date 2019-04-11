@@ -75,6 +75,7 @@ class BootStrap {
 	/* Nurse */
 	def nurse_A = new Nurse
 	(
+	 nurseID:'N-1',
 	 nurseName:'Aston',
 	 qualifications:'A-level', 
 	 nurseEmail:'aston@gmial.com',
@@ -84,6 +85,7 @@ class BootStrap {
 
 	def nurse_B = new Nurse
 	(
+	 nurseID:'N-2',
 	 nurseName:'Miki',
 	 qualifications:'A-level', 
 	 nurseEmail:'miki@gmial.com',
@@ -93,6 +95,7 @@ class BootStrap {
 
 	def nurse_C = new Nurse
 	(
+	 nurseID:'N-3',
 	 nurseName:'Seoiy',
 	 qualifications:'A-level', 
 	 nurseEmail:'seoiy@gmial.com',
@@ -103,6 +106,7 @@ class BootStrap {
 	/* Appointment */
 	def appointment_A = new Appointment
 	(
+	 appID:1,
 	 appDate: new Date('01/04/2019'),
 	 appTime:'3:00 pm',
 	 appDuration:30, 
@@ -111,6 +115,7 @@ class BootStrap {
 
 	def appointment_B = new Appointment
 	(
+	 appID:2,
 	 appDate: new Date('01/9/2019'),
 	 appTime:'9:00 pm',
 	 appDuration:30, 
@@ -119,6 +124,7 @@ class BootStrap {
 
 	def appointment_C = new Appointment
 	(
+	 appID:3,
 	 appDate: new Date('01/5/2019'),
 	 appTime:'9:00 pm',
 	 appDuration:30, 
@@ -230,7 +236,7 @@ class BootStrap {
 	 doctor:doctor_C
 	).save()
 	
-	
+	/*
 	surgery_A.addToReceptionists(receptionist_A)
 	surgery_B.addToReceptionists(receptionist_B)
 	surgery_C.addToReceptionists(receptionist_C)
@@ -265,8 +271,8 @@ class BootStrap {
 
 	prescription_A.addToPatients(patient_A)
 	prescription_B.addToPatients(patient_B)
-	prescription_C.addToPatients(patient_C)
-
+	prescription_C.addToPatients(patient_C)*/
+	
 	}
     def destroy = {
     }

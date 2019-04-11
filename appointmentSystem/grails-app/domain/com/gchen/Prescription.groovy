@@ -1,7 +1,6 @@
 package com.gchen
 
 class Prescription {
-  
 String pharmacyName 
 String prescripNumber 
 String medicine 

@@ -1,7 +1,7 @@
 package com.gchen
 
 class Appointment {
-
+int appID
 Date appDate 
 String appTime 
 int appDuration 
@@ -14,6 +14,7 @@ return appDate
 }
 
     static constraints = {
+	appID blank:false, nullable:false,unique:true;
 	appDate blank:false, nullable:false;
 	appTime blank:false, nullable:false;
 	appDuration blank:false, nullable:false;
